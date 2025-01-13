@@ -1,0 +1,36 @@
+html {
+  scroll-behavior: smooth;
+}
+
+[data-anime="slide-up"] {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-anime="slide-up"].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-anime="fade-in"] {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+[data-anime="fade-in"].visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-anime="slide-right"] {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+[data-anime="slide-right"].visible {
+  opacity: 1;
+  transform: translateX(0);
+}
