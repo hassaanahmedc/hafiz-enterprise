@@ -1,4 +1,11 @@
+import initializeSVGIcons from './addSvgIcons.js';
+import initializeSwipers from './swiper.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    initializeSVGIcons();
+    initializeSwipers();
+
     const menuToggle = document.getElementById('menu-toggle');
     const slidingMenu = document.getElementById('sliding-menu');
     const closeMenuButton = document.getElementById('close-menu');
@@ -20,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sticky WhatsApp Button on scrolll
     const whatsappButton = document.getElementById('whatsapp-button');
-    const heroBtn = document.getElementById('hero-contact-btn');
+    const heroBtn = document.getElementById('intersacting-whatsapp-btn');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -59,4 +66,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Observe each section
     sections.forEach(section => scrollObserver.observe(section));
+
+    // certifications sorting tab
+    function filterGallery(category) {
+        const rows = document.querySelectorAll('.document-row');
+        rows.forEach(row => {
+            const rowType = row.getAttribute('data-type');
+            if (category === 'all' || rowType === category) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    }
 });

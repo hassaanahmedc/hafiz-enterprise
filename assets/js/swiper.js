@@ -1,12 +1,10 @@
 import Swiper from 'swiper';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
-import '/node_modules/swiper/modules/navigation';
-import '/node_modules/swiper/modules/pagination';
 import '/node_modules/swiper/modules/autoplay';
 import '/node_modules/swiper/swiper-bundle.min.css';
 
-document.addEventListener('DOMContentLoaded', () => {
+export default function initializeSwipers() {
   // Partners Sllider
   const swiper = new Swiper('.swiper-container', {
     modules: [Autoplay, Navigation, Pagination],
@@ -42,4 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
       disableOnInteraction: false,
     },
   });
-});
+}

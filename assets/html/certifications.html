@@ -2,18 +2,19 @@
 <html lang="en" data-theme="light">
 
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hafiz Enterprise - Certifications</title>
-    <link rel="stylesheet" href="tailwind.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
     <header class="relative w-full">
-        <figure class="relative w-full h-96">
+        <figure class="relative w-full h-[500px] md:h-96 ">
             <!-- Hero Image -->
-            <img class="w-full h-full object-cover" src="/assets/images/hero7.webp" alt="Hero Image" loading="lazy">
+            <img class="w-full h-full object-cover" src="/images/hero7.webp" alt="Hero Image" loading="lazy">
 
             <!-- Overlay for darker background -->
             <div class="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -23,8 +24,8 @@
                 <div class="flex justify-between items-center">
                     <!-- Title -->
                     <div class="flex items-center gap-3">
-                        <img class="w-16 md:w-20" src="/assets/images/logo.png" loading="lazy" alt="Hero Image" />
-                        <h1 class="text-white text-2xl font-bold">Hafiz Enterprise</h1>
+                        <img class="w-16 md:w-20" src="/images/logo.png" loading="lazy" alt="Hero Image" />
+                        <h1 class="text-white text-xl md:2xl font-bold">Hafiz Enterprise</h1>
                     </div>
                     <div class="relative">
                         <!-- Toggle Button -->
@@ -71,14 +72,14 @@
                 </div>
             </nav>
             <div
-                class="absolute inset-0 top-1/2 transform -translate-y-1/2 px-8 flex flex-col justify-center items-center text-center">
-                <div class="text-white contents">
+                class="absolute inset-0 top-1/2 transform -translate-y-1/2 px-4 md:px-8 flex flex-col justify-center items-center text-center">
+                <div id="intersacting-whatsapp-btn" class="text-white contents">
                     <!-- Adjusted Main Heading -->
-                    <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight max-w-4xl">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight max-w-4xl" data-anime="slide-up">
                         Our Official Certifications and Sales Receipts
                     </h1>
                     <!-- Adjusted Subheading -->
-                    <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl">
+                    <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl" data-anime="slide-up">
                         Explore our trusted documents and official records, showcasing our commitment to excellence,
                         safety standards, and industry partnerships.
                     </p>
@@ -89,15 +90,14 @@
         <a href="https://wa.me/923003114701"
             class="fixed bottom-5 right-5 bg-green-500 text-white text-lg font-bold px-5 py-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50 hidden"
             id="whatsapp-button">
-            <img src="assets/images/icons/whatsapp.svg" class="w-6 h-6 inline-block mr-2" loading="lazy"
-                alt="WhatsApp" />
+            <img src="/images/icons/whatsapp.svg" class="w-6 h-6 inline-block mr-2" alt="WhatsApp" />
             Talk to Us
         </a>
     </header>
     <!-- Hero Section -->
     <section id="about-us" class="section py-24 ">
         <div class="max-w-7xl mx-auto px-6 sm:px-8">
-            <div class="mb-12 text-center">
+            <div class="mb-12 text-center" data-anime="slide-up">
                 <!-- Subheading -->
                 <div class="flex items-center gap-2 justify-center">
                     <div class="w-8 h-1 bg-green-700"></div>
@@ -112,33 +112,33 @@
                 </p>
             </div>
 
-            <!-- Table Layout for Documents -->
-            <div class="overflow-x-auto">
-                <!-- Sorting Buttons -->
-                <div class="flex justify-center mb-8">
-                    <button
-                        class="px-4 py-2 mx-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-green-600 shadow hover:text-white focus:outline-none active:bg-gray-300"
-                        onclick="filterGallery('all')">
-                        All
-                    </button>
-                    <button
-                        class="px-4 py-2 mx-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-green-600 shadow hover:text-white focus:outline-none active:bg-gray-300"
-                        onclick="filterGallery('Certifications')">
-                        Certifications
-                    </button>
-                    <button
-                        class="px-4 py-2 mx-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-green-600 shadow hover:text-white focus:outline-none active:bg-gray-300"
-                        onclick="filterGallery('Memberships')">
-                        Memberships
-                    </button>
-                    <button
-                        class="px-4 py-2 mx-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-green-600 shadow hover:text-white focus:outline-none active:bg-gray-300"
-                        onclick="filterGallery('Orders')">
-                        Orders
-                    </button>
-                </div>
+        <!-- Table Layout for Documents -->
+        <div class="overflow-x-auto" data-anime="slide-up">
+            <!-- Sorting Buttons -->
+            <div class="flex justify-center mb-8">
+                <button
+                    class="px-4 py-2 mx-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-green-600 shadow hover:text-white"
+                    onclick="filterGallery('all')">
+                    All
+                </button>
+                <button
+                    class="px-4 py-2 mx-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-green-600 shadow hover:text-white"
+                    onclick="filterGallery('Certifications')">
+                    Certifications
+                </button>
+                <button
+                    class="px-4 py-2 mx-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-green-600 shadow hover:text-white"
+                    onclick="filterGallery('Memberships')">
+                    Memberships
+                </button>
+                <button
+                    class="px-4 py-2 mx-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-green-600 shadow hover:text-white"
+                    onclick="filterGallery('Orders')">
+                    Orders
+                </button>
+            </div>
 
-                <table class="min-w-full text-sm">
+                <table class="min-w-full text-sm border border-gray-300 shadow-lg">
                     <thead class="bg-gray-100">
                         <tr>
                             <th class="px-6 py-3 text-center text-gray-600 w-20">S.no</th>
@@ -150,7 +150,7 @@
                     <tbody id="document-table-body">
                         <!-- Certification 1 -->
                         <tr class="document-row" data-type="Certifications">
-                            <td class="px-6 py-4 w-20 text-center">1</td> <!-- Serial Number -->
+                            <td class="px-6 py-4 w-20 text-center">1</td>
                             <td class="px-6 py-4">FBR Acknowlegement Slip</td>
                             <td class="px-6 py-4">Certification</td>
                             <td class="px-6 py-4">
@@ -158,7 +158,7 @@
                                     onclick="my_modal_1.showModal()">View</button>
                                 <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box">
-                                        <img src="/assets/images/certificates/fbr-slip.jpg" class="z-50" loading="lazy"
+                                        <img src="/images/certificates/fbr-slip.jpg" class="z-50" loading="lazy"
                                             alt="Certificate Image">
                                     </div>
                                     <form method="dialog" class="modal-backdrop">
@@ -177,7 +177,7 @@
                                     onclick="my_modal_2.showModal()">View</button>
                                 <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box">
-                                        <img src="/assets/images/certificates/fbr-taxpayer.jpg" loading="lazy"
+                                        <img src="/images/certificates/fbr-taxpayer.jpg" loading="lazy"
                                             alt="Certificate Image">
                                     </div>
                                     <form method="dialog" class="modal-backdrop">
@@ -196,7 +196,7 @@
                                     onclick="my_modal_3.showModal()">View</button>
                                 <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box">
-                                        <img src="/assets/images/certificates/pr-tax-certificate.jpg" loading="lazy"
+                                        <img src="/images/certificates/pr-tax-certificate.jpg" loading="lazy"
                                             alt="Certificate Image">
                                     </div>
                                     <form method="dialog" class="modal-backdrop">
@@ -215,8 +215,8 @@
                                     onclick="my_modal_4.showModal()">View</button>
                                 <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box">
-                                        <img src="/assets/images/certificates/pr-tax-certificate-2024.jpg"
-                                            loading="lazy" alt="Certificate Image">
+                                        <img src="/images/certificates/pr-tax-certificate-2024.jpg" loading="lazy"
+                                            alt="Certificate Image">
                                     </div>
                                     <form method="dialog" class="modal-backdrop">
                                         <button>Close</button>
@@ -234,7 +234,7 @@
                                     onclick="my_modal_5.showModal()">View</button>
                                 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box">
-                                        <img src="/assets/images/certificates/sukkur-chamber-membership-certificate.jpg"
+                                        <img src="/images/certificates/sukkur-chamber-membership-certificate.jpg"
                                             loading="lazy" alt="Award Image">
                                     </div>
                                     <form method="dialog" class="modal-backdrop">
@@ -253,7 +253,7 @@
                                     onclick="my_modal_6.showModal()">View</button>
                                 <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box">
-                                        <img src="/assets/images/certificates/siehs order.jpg" loading="lazy"
+                                        <img src="/images/certificates/siehs order.jpg" loading="lazy"
                                             alt="Receipt Image ">
                                     </div>
                                     <form method="dialog" class="modal-backdrop">
@@ -272,7 +272,7 @@
                                     onclick="my_modal_7.showModal()">View</button>
                                 <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box">
-                                        <img src="/assets/images/certificates/sukkur-baverage-order.jpg" loading="lazy"
+                                        <img src="/images/certificates/sukkur-baverage-order.jpg" loading="lazy"
                                             alt="Receipt Image ">
                                     </div>
                                     <form method="dialog" class="modal-backdrop">
@@ -291,7 +291,7 @@
                                     onclick="my_modal_8.showModal()">View</button>
                                 <dialog id="my_modal_8" class="modal modal-bottom sm:modal-middle">
                                     <div class="modal-box">
-                                        <img src="/assets/images/certificates/pphi-order.jpg" loading="lazy"
+                                        <img src="/images/certificates/pphi-order.jpg" loading="lazy"
                                             alt="Receipt Image ">
                                     </div>
                                     <form method="dialog" class="modal-backdrop">
@@ -304,25 +304,96 @@
                     </tbody>
                 </table>
             </div>
-
-            <script>
-                function filterGallery(category) {
-                    const rows = document.querySelectorAll('.document-row');
-                    rows.forEach(row => {
-                        const rowType = row.getAttribute('data-type');
-                        if (category === 'all' || rowType === category) {
-                            row.style.display = '';
-                        } else {
-                            row.style.display = 'none';
-                        }
-                    });
-                }
-            </script>
-
         </div>
     </section>
 
-    <script src="/assets/js/script.js"></script>
+    <footer class="bg-gray-900 text-gray-300 py-12 overflow-hidden">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="grid gap-5 md:grid-cols-2">
+                <div class="md:pr-36">
+                    <div data-anime="slide-up">
+                        <div class="flex items-center gap-5">
+                            <figure>
+                                <img class="w-16 md:w-24" src="/images/logo.png" alt="Hero Image">
+                            </figure>
+                            <h2 class="text-xl md:text-2xl font-bold text-white">Hafiz Enterprise</h2>
+                        </div>
+                        <p class="my-4 leading-relaxed space-y-6">We are a trusted name in the supply industry, offering
+                            a diverse range of
+                            products
+                            that cater to the needs of a variety of sectors. With its years of experience, commitment to
+                            quality, and reliable service</p>
+                    </div>
+                    <!-- Contact Buttons -->
+                    <div data-anime="fade-in">
+                        <h6 class="text-lg font-bold mb-4 text-white text-center md:text-start">Reach Out To Us</h6>
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <a href="https://wa.me/923003114701"
+                                class="flex items-center justify-center bg-green-600 hover:bg-green-700 py-1 px-5 rounded-full cursor-pointer">
+                                <img src="/images/icons/whatsapp.svg" class="w-8 h-8" alt="">
+                                <p class="font-semibold text-white">WhatsApp</p>
+
+                            </a>
+                            <a href=""
+                                class="flex items-center justify-center bg-blue-600 hover:bg-blue-700 py-1 px-5 rounded-full cursor-pointer">
+                                <img src="/images/icons/facebook.svg" class="w-10 h-10" alt="">
+                                <p class="font-semibold text-white">Facebook</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-anime="slide-right">
+                    <div>
+                        <h6 class="text-lg font-bold mb-4 text-white">Opening Hours</h6>
+                        <ul class="space-y-2">
+                            <li>Open Daily</li>
+                            <li>11AM-9PM</li>
+                            <li>Friday Closed</li>
+                        </ul>
+                    </div>
+
+                    <!-- Menu Section -->
+                    <div>
+                        <h6 class="text-lg font-bold mb-4 text-white">Menu</h6>
+                        <ul class="space-y-2">
+                            <li><a href="#hero" class="hover:text-green-600">Home</a></li>
+                            <li><a href="#our-services" class="hover:text-green-600">Services</a></li>
+                            <li><a href="#about-us" class="hover:text-green-600">About Us</a></li>
+                            <li><a href="#contact-us" class="hover:text-green-600">Contact Us</a></li>
+                            <li><a href="assets/html/certifications.html"
+                                    class="hover:text-green-600">Certifications</a></li>
+                        </ul>
+                    </div>
+                    <!-- Contact Section -->
+                    <div class="">
+                        <h6 class="text-lg font-bold mb-4 text-white">Contact</h6>
+                        <address class="not-italic space-y-2">
+                            <span class="flex items-center">
+                                Address: Shop No 19
+                                Opposite Faysal bank
+                                Race cource road, Sukkur
+                            </span>
+                            <span class="flex items-center">
+                                Mobile No: 03003114701
+                            </span>
+                            <span class="flex items-center">
+                                Phone No: 071-5613221
+                            </span>
+                            <span class="flex items-center">
+                                Whatsapp: 0313-3114614
+                            </span>
+                            <span class="flex items-center">
+                                Zip Code: 44017
+                            </span>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
+
 
 </html>
