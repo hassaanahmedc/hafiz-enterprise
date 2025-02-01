@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sticky WhatsApp Button on scrolll
     const whatsappButton = document.getElementById('whatsapp-button');
-    const heroBtn = document.getElementById('intersacting-whatsapp-btn');
+    const whatasppBtnLimit = document.getElementById('intersacting-whatsapp-btn');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1,
     });
 
-    observer.observe(heroBtn);
+    observer.observe(whatasppBtnLimit);
 
     // Smooth Scrolling
     const sections = document.querySelectorAll('[data-anime]'); // Targeting elements with data-anime
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => scrollObserver.observe(section));
 
     // certifications sorting tab
-    function filterGallery(category) {
+    window.filterGallery = function (category) {
         const rows = document.querySelectorAll('.document-row');
         rows.forEach(row => {
             const rowType = row.getAttribute('data-type');
